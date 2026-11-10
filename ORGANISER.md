@@ -2,7 +2,7 @@
 
 A working checklist for running Prompt to Play. The participant rules are in [RULES.md](RULES.md) and the submission steps are in [SUBMISSION.md](SUBMISSION.md).
 
-The commands use the GitHub CLI (`gh`), signed in as the repository owner. Each one is a single line that works in PowerShell and in Bash.
+The commands use the GitHub CLI (`gh`), signed in as the repository owner. Each one is a single line.
 
 ## Before the event
 
