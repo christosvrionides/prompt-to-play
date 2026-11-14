@@ -11,7 +11,7 @@ Your agent does every step below. You prompt, and it runs the commands. The full
 | **Pull request** | Into `main`, opened by your agent before the building hour ends |
 | **Merging** | The organiser only. Never merge your own pull request. |
 
-Names are lowercase and hyphen-separated. Team "Pixel Pirates" with the game "Star Hop" uses `games/pixel-pirates-star-hop/` and `submission/pixel-pirates-star-hop`.
+Names are lowercase and hyphen-separated. Branch names may have an optional lowercase, hyphen-separated suffix; the game folder name stays unchanged. Team "Pixel Pirates" with the game "Star Hop" uses `games/pixel-pirates-star-hop/` and `submission/pixel-pirates-star-hop`.
 
 ## Step by step
 
@@ -76,7 +76,7 @@ A commit or pull request alone does not prevent later changes, which is why the 
 
 ## Submission checklist
 
-- [ ] The branch is `submission/<team-name>-<game-name>`, created from `main`.
+- [ ] The branch is `submission/<team-name>-<game-name>` with any optional suffix, created from `main`.
 - [ ] Everything is inside `games/<team-name>-<game-name>/`, and nothing outside it has changed.
 - [ ] The game launches locally using the instructions in its `README.md`.
 - [ ] `README.md` covers the game, controls, setup, launch, external services and known issues.

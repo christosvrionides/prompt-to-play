@@ -76,7 +76,7 @@ games/<team-name>-<game-name>/
 
 Use lowercase, hyphen-separated names. Each team must:
 
-1. Have its agent create a branch from `main` named `submission/<team-name>-<game-name>`.
+1. Have its agent create a branch from `main` named `submission/<team-name>-<game-name>`. An optional lowercase, hyphen-separated suffix is allowed on the branch only; it does not change the game folder name.
 2. Keep all game-specific source, assets, dependency manifests, lockfiles, configuration, instructions and build logs inside its own folder.
 3. Not modify root event documentation, repository settings or another team's files.
 4. Include a game `README.md` explaining the game, controls, setup, local launch instructions, any external service requirements and known issues.

@@ -57,7 +57,7 @@ Each visiting team has roughly 10 minutes with your game, depending on the rotat
 Everything your team makes lives in one folder, on one branch, in one pull request:
 
 - **Folder:** `games/<team-name>-<game-name>/`, lowercase and hyphen-separated. Build there from the start.
-- **Branch:** `submission/<team-name>-<game-name>`, created from `main` by your agent.
+- **Branch:** `submission/<team-name>-<game-name>`, with an optional lowercase, hyphen-separated suffix, created from `main` by your agent. A branch suffix does not change the folder name.
 - **Include:** a game `README.md` and a `BUILD_LOG.md`. There are [templates](templates/) for both.
 - **Pull request:** your agent opens it into `main` before the hour ends. Don't merge it yourself. The organiser reviews and merges.
 

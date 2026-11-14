@@ -16,7 +16,7 @@
 
 - [ ] Built during the building hour with GPT-6 Luna (`gpt-6-luna`) only, in one agent session, with no sub-agents, parallel agents, delegation or other AI models.
 - [ ] Humans only prompted, approved permission requests, playtested and described problems. The agent did all development work, including this pull request.
-- [ ] This branch is `submission/<team-name>-<game-name>`, and every change is inside the submission folder.
+- [ ] This branch is `submission/<team-name>-<game-name>` with any optional suffix, and every change is inside the submission folder.
 - [ ] The game and any backend run locally. Nothing is deployed to the cloud.
 - [ ] The folder has a `README.md` and an up-to-date `BUILD_LOG.md` that lists external sources and reused components.
 - [ ] No credentials, secrets, installed dependencies, caches or temporary files are committed.
