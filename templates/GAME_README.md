@@ -12,7 +12,7 @@ One or two sentences: what is the game, and what is the player trying to do?
 ## How to play
 
 - **Goal:**
-- **Controls:**
+- **Controls:** include how to start, restart and pause, where supported.
 - **Time to play:** the length of a round, or the short mode or milestone a visitor can reach in about 10 minutes.
 
 ## Setup

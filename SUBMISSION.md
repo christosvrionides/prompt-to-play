@@ -58,7 +58,7 @@ Leave time for this. It is part of your hour. Prompt something like:
 
 The pull request must identify your team, game, submission folder, launch instructions and known issues. The [pull request template](.github/pull_request_template.md) has a section for each.
 
-You can open the pull request early. Anything your agent pushes to the branch before the cutoff updates it.
+You can open the pull request early. Anything your agent pushes to the branch before the cutoff updates it. Before time runs out, have your agent check that the latest commit is pushed and give you the pull request link and head commit ID.
 
 **Do not merge your pull request.** The organiser reviews and merges it.
 

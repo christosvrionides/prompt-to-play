@@ -6,7 +6,7 @@
 
 ## Launch instructions
 
-<!-- How to set up and start the game locally, from the submission folder. -->
+<!-- Give setup and launch steps from the submission folder. State where the game opens and list any required environment variables using placeholders only. -->
 
 ## Known issues
 

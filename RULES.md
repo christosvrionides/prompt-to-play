@@ -84,7 +84,7 @@ Use lowercase, hyphen-separated names. Each team must:
 6. Exclude installed dependencies, caches, temporary files and secrets from Git.
 7. Have the agent commit, push and open a pull request into `main` before the building hour ends.
 
-The pull request must identify the team, game, submission folder, launch instructions and known issues.
+The pull request must identify the team, game, submission folder, launch instructions and known issues. Use the [pull request template](.github/pull_request_template.md) so that nothing is missed.
 
 **Do not merge your own submission.** The organiser reviews and merges it.
 

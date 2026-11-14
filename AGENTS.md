@@ -66,7 +66,7 @@ Your team has one hour, including submission. Each visiting team then has roughl
 
 When your team asks you to submit, follow [SUBMISSION.md](SUBMISSION.md):
 
-1. Check that your folder contains the game, its `README.md` and its `BUILD_LOG.md`, and that nothing outside the folder has changed.
+1. Check that your folder contains the game, its `README.md` and its `BUILD_LOG.md`, and that nothing outside the folder has changed. Make sure the README's setup and launch instructions match the submitted game.
 2. Commit on your `submission/<team-name>-<game-name>` branch (including any permitted suffix) and push the branch.
 3. Open a pull request into `main`. Fill in every section of [.github/pull_request_template.md](.github/pull_request_template.md): team, game, submission folder, launch instructions, known issues and the compliance checklist.
 4. Give your team the pull request link and its head commit ID.

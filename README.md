@@ -58,7 +58,7 @@ Everything your team makes lives in one folder, on one branch, in one pull reque
 
 - **Folder:** `games/<team-name>-<game-name>/`, lowercase and hyphen-separated. Build there from the start.
 - **Branch:** `submission/<team-name>-<game-name>`, with an optional lowercase, hyphen-separated suffix, created from `main` by your agent. A branch suffix does not change the folder name.
-- **Include:** a game `README.md` and a `BUILD_LOG.md`. There are [templates](templates/) for both.
+- **Include:** a game `README.md` with setup, controls and launch instructions, plus a `BUILD_LOG.md`. There are [templates](templates/) for both.
 - **Pull request:** your agent opens it into `main` before the hour ends. Don't merge it yourself. The organiser reviews and merges.
 
 Step-by-step instructions and a checklist: [SUBMISSION.md](SUBMISSION.md).
