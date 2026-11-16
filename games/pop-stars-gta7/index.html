@@ -15,18 +15,36 @@
         <span class="wordmark-main">GTA7</span>
         <span class="wordmark-sub">PIPELINE PANIC</span>
       </a>
-      <div class="session-chip"><span class="live-dot"></span> LOCAL CO-OP / 2 PLAYERS</div>
+      <div class="topbar-actions">
+        <button class="music-button" id="music-toggle" type="button" aria-pressed="true">MUSIC ON</button>
+        <div class="session-chip"><span class="live-dot"></span> LOCAL CO-OP / 2 PLAYERS</div>
+      </div>
     </header>
 
     <main>
       <section class="game-frame" aria-label="GTA7 Pipeline Panic game">
         <canvas id="game" width="960" height="540" aria-label="Two-player platform game"></canvas>
         <div class="screen-overlay" id="overlay">
-          <div class="overlay-sheet">
-            <div class="eyebrow" id="overlay-kicker">LOCAL BUILD / 01</div>
-            <h1 id="overlay-title">PIPELINE<br><span>PANIC</span></h1>
-            <p class="overlay-copy" id="overlay-copy">Collect the three release keys. Get both Richards to the ship gate before the AGB takes over the build.</p>
+          <section class="overlay-sheet overlay-screen" id="welcome-screen">
+            <div class="eyebrow">LOCAL BUILD / 01</div>
+            <h1>PIPELINE<br><span>PANIC</span></h1>
+            <p class="overlay-copy">Five stages, one shared keyboard. Work through discovery, testing, launch, and the final boardroom fight.</p>
+            <ol class="intro-list">
+              <li><b>DISCOVERY</b> Find 3 documents in the office.</li>
+              <li><b>ALPHA</b> Play the original pipeline course and collect 3 keys.</li>
+              <li><b>PRIVATE BETA</b> Stay out of forest spotlights; being seen drains health.</li>
+              <li><b>PUBLIC BETA</b> Cross the clouds and jump over policy lasers.</li>
+              <li><b>HLD REVIEW</b> Throw HLDs at the AGB boss. P1: F. P2: Down arrow.</li>
+              <li><b>MOVE</b> P1: A / D + W. P2: Left / Right + Up. VM slows, MacBook speeds up, AI enables flight.</li>
+            </ol>
+            <button class="launch-button" id="choose-button" type="button">CHOOSE RUNNERS</button>
+            <p class="overlay-hint">Press Enter to choose. M toggles the original chase music.</p>
+          </section>
 
+          <section class="overlay-sheet overlay-screen" id="selection-screen" hidden>
+            <div class="eyebrow">STEP 02 / PICK YOUR CREW</div>
+            <h1 class="screen-title">CHOOSE YOUR<br><span>RICHARDS</span></h1>
+            <p class="overlay-copy">Choose one Richard for each player. Every runner carries two laptops.</p>
             <div class="roster" id="roster">
               <div class="roster-row">
                 <span class="runner-mark runner-one">01</span>
@@ -46,11 +64,52 @@
               </div>
             </div>
 
-            <button class="launch-button" id="action-button">START THE BUILD</button>
-            <p class="overlay-hint" id="overlay-hint">P1: Q / E to choose. P2: , / . to choose. Press Enter to start.</p>
-          </div>
+            <button class="launch-button" id="action-button" type="button">START THE BUILD</button>
+            <p class="overlay-hint">P1: Q / E to choose. P2: , / . to choose. Press Enter to start.</p>
+          </section>
+
+          <section class="overlay-sheet overlay-screen" id="pause-screen" hidden>
+            <div class="eyebrow">BUILD ON HOLD</div>
+            <h1>PAUSED</h1>
+            <p class="overlay-copy">The pipeline is waiting. The AGB is not.</p>
+            <button class="launch-button" id="resume-button" type="button">RESUME BUILD</button>
+            <p class="overlay-hint">Press P, Esc, or Enter to get back in.</p>
+          </section>
+
+          <section class="overlay-sheet overlay-screen" id="stage-screen" hidden>
+            <div class="eyebrow" id="stage-kicker">NEXT STAGE</div>
+            <h1 class="screen-title" id="stage-title">DISCOVERY<br><span>OFFICE</span></h1>
+            <p class="overlay-copy" id="stage-copy"></p>
+            <button class="launch-button" id="stage-continue" type="button">ENTER STAGE</button>
+            <p class="overlay-hint">Press Enter to continue.</p>
+          </section>
+
+          <section class="overlay-sheet overlay-screen result-screen" id="result-screen" hidden>
+            <div class="eyebrow" id="result-kicker">BUILD COMPLETE</div>
+            <h1 id="result-title">BUILD<br><span>SHIPPED</span></h1>
+            <p class="overlay-copy" id="result-copy"></p>
+            <div class="score-summary" aria-label="Run results">
+              <div><span>SCORE</span><strong id="result-score">0</strong></div>
+              <div><span>STAGES</span><strong id="result-keys">0 / 5</strong></div>
+              <div><span>TIME</span><strong id="result-time">0:00</strong></div>
+            </div>
+            <form class="score-form" id="score-form">
+              <label for="score-name">ADD YOUR NAME TO THE LOCAL BOARD</label>
+              <div class="result-form-row">
+                <input id="score-name" name="name" type="text" maxlength="18" autocomplete="nickname" placeholder="Your name" required>
+                <button class="launch-button" type="submit">SAVE SCORE</button>
+              </div>
+            </form>
+            <p class="score-feedback" id="score-feedback" role="status" hidden></p>
+            <div class="leaderboard" aria-live="polite">
+              <div class="leaderboard-heading"><span>LOCAL LEADERBOARD</span><span>TOP 5</span></div>
+              <ol class="leaderboard-list" id="leaderboard-list"></ol>
+            </div>
+            <button class="launch-button retry-button" id="retry-button" type="button">RETRY RUN</button>
+            <p class="overlay-hint">Scores stay in this browser on this device.</p>
+          </section>
         </div>
-        <div class="corner-label">BUILD 01 <span>/</span> GREENFIELD</div>
+        <div class="corner-label" id="corner-label">BUILD 01 <span>/</span> GREENFIELD</div>
       </section>
 
       <section class="control-dock" aria-label="Controls and objective">
@@ -72,9 +131,14 @@
           <div class="control-row control-row-shortcuts">
             <span><kbd>P</kbd> or <kbd>Esc</kbd> pause</span>
             <span><kbd>R</kbd> restart</span>
+            <span><kbd>F</kbd> / <kbd>Down</kbd> throw HLDs in final stage</span>
           </div>
         </div>
-        <div class="power-note"><span class="power-swatch swatch-vm">VM</span> slows you down <span class="power-divider">/</span> <span class="power-swatch swatch-mac">MB</span> speeds you up <span class="power-divider">/</span> <span class="power-swatch swatch-ai">AI</span> lets you fly</div>
+        <div class="power-note" aria-label="Power-up effects">
+          <span class="power-note-item"><span class="power-swatch swatch-vm">VM</span><b>POWER APPS</b><span>slows you</span></span>
+          <span class="power-note-item"><span class="power-swatch swatch-mac">MB</span><b>MACBOOK</b><span>speeds you up</span></span>
+          <span class="power-note-item"><span class="power-swatch swatch-ai">AI</span><b>AI</b><span>hold jump to fly</span></span>
+        </div>
       </section>
     </main>
 

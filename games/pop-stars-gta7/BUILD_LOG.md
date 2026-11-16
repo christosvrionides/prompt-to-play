@@ -15,12 +15,14 @@ Record observable actions and concise summaries. Do not record private chain-of-
 | --- | --- | --- |
 | 2026-11-16 | Created the team submission branch and a dependency-free HTML Canvas game. | Added keyboard co-op platforming, the Richard roster, laptop sprites, Azure pipes, AGB enemies, checkpoints, collectibles, and the ship gate. |
 | 2026-11-16 | Added setup documentation and local-only ignore rules. | The game opens directly in a modern browser without installing packages or using an online service. |
+| 2026-11-16 | Added separate welcome and character-selection screens, clearer power-up feedback, local results and leaderboard, retry flow, and original synthesized chase music. | Verified the intro, picker, game, pause, music toggle, and mobile layouts in a browser. Updated AGB drawing to face its travel direction. |
 
 ## Key prompts
 
 | Time | Prompt summary | Outcome |
 | --- | --- | --- |
 | 2026-11-16 | Build a web-based two-player keyboard platform game with Richards, laptops, Azure pipelines, VM, MacBook, AI flight, and an AGB enemy. | Implemented as an original co-op game with three character choices and shared-screen play. |
+| 2026-11-16 | Clarify power-ups, add onboarding, character selection, a named leaderboard and retry, fix AGB facing, and add music. | Added local-only top-five scores and a toggleable original chase loop. |
 
 ## External sources
 
@@ -32,10 +34,10 @@ Record observable actions and concise summaries. Do not record private chain-of-
 
 | Component or asset | Source URL | Licence | How it is used |
 | --- | --- | --- | --- |
-| None | None | None | The game code and canvas-drawn visuals are original and use browser APIs only. |
+| Web Audio API and Canvas 2D | https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API ; https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API | Browser web standards; no bundled assets | Synthesized original chase music and draw all game visuals locally. |
 
 ## Important fixes
 
 | Problem | Fix |
 | --- | --- |
-| None recorded yet. | Initial implementation. |
+| The character picker was taller than the game window on narrow screens. | Tightened the title and roster layout and hid secondary intro text on small screens; checked the picker at 390px wide. |
