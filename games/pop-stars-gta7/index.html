@@ -28,44 +28,45 @@
           <section class="overlay-sheet overlay-screen" id="welcome-screen">
             <div class="eyebrow">LOCAL BUILD / 01</div>
             <h1>PIPELINE<br><span>PANIC</span></h1>
-            <p class="overlay-copy">Five stages, one shared keyboard. Work through discovery, testing, launch, and the final boardroom fight.</p>
-            <ol class="intro-list">
-              <li><b>DISCOVERY</b> Find 3 documents in the office.</li>
-              <li><b>ALPHA</b> Play the original pipeline course and collect 3 keys.</li>
-              <li><b>PRIVATE BETA</b> Stay out of forest spotlights; being seen drains health.</li>
-              <li><b>PUBLIC BETA</b> Cross the clouds and jump over policy lasers.</li>
-              <li><b>HLD REVIEW</b> Throw HLDs at the AGB boss. P1: F. P2: Down arrow.</li>
-              <li><b>MOVE</b> P1: A / D + W. P2: Left / Right + Up. VM slows, MacBook speeds up, AI enables flight.</li>
-            </ol>
+            <p class="overlay-copy">Two Richards share one keyboard. Learn what the pickups and AGBs do, then get both runners safely to SHIP.</p>
+            <ul class="intro-list">
+              <li><b>AGB BIRDS</b> They patrol the route. Land on one from above to stomp it; a side hit costs a retry. Checkpoints save progress.</li>
+              <li><b>PICKUPS</b> VM slows you for 4.5 seconds. MacBook boosts speed for 6 seconds. With AI flight, hold jump in midair to rise for 6 seconds.</li>
+              <li><b>KEYS &amp; TEAMWORK</b> Collect all 3 release keys to unlock SHIP. Both Richards must reach the gate; jump across gaps and platforms together.</li>
+              <li><b>FINAL AGB</b> In the boardroom, throw HLDs to damage the boss. P1: F. P2: Down arrow.</li>
+              <li><b>MOVE</b> P1: A / D to move, W to jump. P2: Left / Right to move, Up to jump. P or Esc pauses; R retries.</li>
+            </ul>
             <button class="launch-button" id="choose-button" type="button">CHOOSE RUNNERS</button>
             <p class="overlay-hint">Press Enter to choose. M toggles the original chase music.</p>
           </section>
 
           <section class="overlay-sheet overlay-screen" id="selection-screen" hidden>
             <div class="eyebrow">STEP 02 / PICK YOUR CREW</div>
-            <h1 class="screen-title">CHOOSE YOUR<br><span>RICHARDS</span></h1>
-            <p class="overlay-copy">Choose one Richard for each player. Every runner carries two laptops.</p>
+            <h1 class="screen-title">SELECT YOUR<br><span>CHARACTER</span></h1>
+            <p class="overlay-copy">Choose a character for each player. Junaid, Tariq, and Christos carry a VM; Hannah has her guide dog.</p>
             <div class="roster" id="roster">
               <div class="roster-row">
                 <span class="runner-mark runner-one">01</span>
-                <div class="runner-label"><span>RUNNER ONE</span><strong id="character-one">RICHARD 1</strong></div>
-                <div class="cycle-controls">
-                  <button class="cycle-button" data-player="0" data-step="-1" aria-label="Previous character for player one">-</button>
-                  <button class="cycle-button" data-player="0" data-step="1" aria-label="Next character for player one">+</button>
+                <div class="runner-label"><span>PLAYER ONE</span>
+                  <select class="character-select" id="character-one" data-player="0" aria-label="Choose player one's character">
+                    <option value="0">RICHARD 1</option><option value="1">RICHARD 2</option><option value="2">RICHARD 3</option>
+                    <option value="3">JUNAID (VM)</option><option value="4">TARIQ (VM)</option><option value="5">CHRISTOS (VM)</option><option value="6">HANNAH (GUIDE DOG)</option>
+                  </select>
                 </div>
               </div>
               <div class="roster-row">
                 <span class="runner-mark runner-two">02</span>
-                <div class="runner-label"><span>RUNNER TWO</span><strong id="character-two">RICHARD 2</strong></div>
-                <div class="cycle-controls">
-                  <button class="cycle-button" data-player="1" data-step="-1" aria-label="Previous character for player two">-</button>
-                  <button class="cycle-button" data-player="1" data-step="1" aria-label="Next character for player two">+</button>
+                <div class="runner-label"><span>PLAYER TWO</span>
+                  <select class="character-select" id="character-two" data-player="1" aria-label="Choose player two's character">
+                    <option value="0">RICHARD 1</option><option value="1">RICHARD 2</option><option value="2">RICHARD 3</option>
+                    <option value="3">JUNAID (VM)</option><option value="4">TARIQ (VM)</option><option value="5">CHRISTOS (VM)</option><option value="6">HANNAH (GUIDE DOG)</option>
+                  </select>
                 </div>
               </div>
             </div>
 
             <button class="launch-button" id="action-button" type="button">START THE BUILD</button>
-            <p class="overlay-hint">P1: Q / E to choose. P2: , / . to choose. Press Enter to start.</p>
+            <p class="overlay-hint">Choose directly from each menu, or use P1: Q / E and P2: , / . Press Enter to start.</p>
           </section>
 
           <section class="overlay-sheet overlay-screen" id="pause-screen" hidden>
@@ -115,7 +116,7 @@
       <section class="control-dock" aria-label="Controls and objective">
         <div class="dock-heading">
           <span class="eyebrow">SHARED KEYBOARD</span>
-          <span class="objective">GOAL <b>3 KEYS + BOTH RUNNERS AT THE GATE</b></span>
+          <span class="objective">GOAL <b id="objective-text">3 KEYS + BOTH RUNNERS AT THE GATE</b></span>
         </div>
         <div class="control-grid">
           <div class="control-row">

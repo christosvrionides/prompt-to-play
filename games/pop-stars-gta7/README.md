@@ -5,17 +5,18 @@
 | **Team** | Pop Stars |
 | **Folder** | `games/pop-stars-gta7/` |
 
-GTA7: Pipeline Panic is an original two-player co-op platform game. Follow the opening instructions, choose two of the three Richards, collect all three release keys, then get both runners to the exit while dodging Azure pipeline pipes and angry green birds (AGB). Each Richard always carries two laptops.
+GTA7: Pipeline Panic is an original two-player co-op platform game. Choose two characters from the Richard crew, Junaid, Tariq, Christos, and Hannah, then work through five stages: search the Discovery office, ship the original Alpha pipeline, sneak through the Private Beta forest, cross the Public Beta policy course, and defeat the AGB in the HLD review. Each runner carries two laptops.
 
 ## How to play
 
-- **Goal:** Collect all three golden release keys and bring both runners to the SHIP gate. Each runner has three retries; losing all retries on either runner ends the build.
-- **Player 1:** `A` and `D` to move, `W` to jump. In the character picker, `Q` and `E` cycle through the Richards.
-- **Player 2:** Left and Right arrows to move, Up arrow to jump. In the character picker, `,` and `.` cycle through the Richards.
-- **Power-ups:** The pickup banner and player HUD name the effect and show its remaining time. `VM` (Power Apps) slows you, `MB` (MacBook) speeds you up, and `AI` lets you fly while you hold the jump key.
+- **Goal:** Complete each stage objective and bring both runners to its exit. Collect three documents in Discovery and three release keys in Alpha, avoid the forest spotlights in Private Beta, jump the policy lasers in Public Beta, then hit the final AGB with HLDs.
+- **Player 1:** `A` and `D` to move, `W` to jump. Press `F` to throw an HLD during the final boss fight.
+- **Player 2:** Left and Right arrows to move, Up arrow to jump. Press Down arrow to throw an HLD during the final boss fight.
+- **Character picker:** Choose either runner directly from the menus, or use `Q` / `E` for Player 1 and `,` / `.` for Player 2. Junaid, Tariq, and Christos carry VMs; Hannah has a guide dog.
+- **Power-ups:** The pickup banner and player HUD name the effect and show its remaining time. `VM` slows you, `MB` speeds you up, and `AI` lets you fly while you hold the jump key.
 - **Other controls:** Follow the opening screen, then press `Enter` to choose runners and start. `P` or `Esc` pauses; `R` restarts; `M` toggles the original chase music.
 - **Leaderboard:** At the end of a run, enter a name to save the score to this browser's local top-five leaderboard. Choose **Retry Run** to play again.
-- **Time to play:** A short run takes about 3-6 minutes, depending on how often the AGB catches the team. The finish gate is the run's milestone.
+- **Progression:** Ordinary stage exits open the next stage. The results and leaderboard screen appear after the final boss is defeated or the run ends from lost retries.
 
 ## Setup
 
